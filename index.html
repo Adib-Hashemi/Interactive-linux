@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>Linux</title>
+  <meta name="description" content="راهنمای تعاملی لینوکس: تاریخچه، معماری، توزیع‌ها، فرمان‌های پایه و آزمون پایانی.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><div class="ambient ambient-three"></div>
+  <header class="topbar glass">
+    <a class="brand" href="#home"><span class="brand-mark">λ</span><span>LINUX <b>ATLAS</b></span></a>
+    <nav aria-label="ناوبری اصلی">
+      <a href="#intro">مقدمه</a><a href="#history">تاریخچه</a><a href="#architecture">معماری</a><a href="#distros">توزیع‌ها</a><a href="#terminal">ترمینال</a><a href="#quiz">آزمون</a>
+    </nav>
+    <button id="themeToggle" class="icon-btn" aria-label="تغییر تم">☼</button>
+  </header>
+
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> راهنمای تعاملی سیستم‌عامل</div>
+        <h1>دنیای <span class="gradient-text">Linux</span><br>را از پایه کشف کن.</h1>
+        <p class="hero-lead">از ایده‌های یونیکس و پروژه GNU تا هسته، شِل، سیستم فایل و توزیع‌های امروزی؛ لینوکس را با توضیح‌های روشن، نمودارهای زنده و تمرین‌های عملی یاد بگیر.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#intro">شروع یادگیری <span>←</span></a><a class="btn btn-ghost" href="#terminal">رفتن به ترمینال <span>⌘</span></a></div>
+        <div class="hero-stats">
+          <div><strong>1991</strong><span>انتشار نخستین هسته</span></div>
+          <div><strong>Open Source</strong><span>شفاف و مشارکتی</span></div>
+          <div><strong>Everywhere</strong><span>از سرور تا دستگاه هوشمند</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+        <div class="linux-core"><div class="core-ring">L</div><span>LINUX KERNEL</span><small>CORE OF THE SYSTEM</small></div>
+        <div class="float-card float-top glass"><span class="float-icon">⌘</span><div><b>Shell</b><small>فرمان و تعامل</small></div></div>
+        <div class="float-card float-right glass"><span class="float-icon">▤</span><div><b>File system</b><small>سازمان‌دهی داده‌ها</small></div></div>
+        <div class="float-card float-bottom glass"><span class="float-icon">◈</span><div><b>Open source</b><small>آزادی و همکاری</small></div></div>
+        <div class="float-card float-left glass"><span class="float-icon">⚙</span><div><b>Processes</b><small>مدیریت منابع</small></div></div>
+      </div>
+      <div class="scroll-hint"><span></span> برای کاوش، پایین برو</div>
+    </section>
+
+    <section class="section-wrap section" id="intro">
+      <div class="section-heading"><div><span class="section-kicker">01 / THE BASICS</span><h2>لینوکس دقیقاً چیست؟</h2></div><p>برای درک درست لینوکس، باید بین «هسته» و «سیستم‌عامل کامل» تفاوت بگذاریم.</p></div>
+      <div class="grid three">
+        <article class="info-card glass"><div class="card-symbol purple">◉</div><h3>هسته (Kernel)</h3><p>هسته لینوکس نرم‌افزاری مرکزی است که بین برنامه‌ها و سخت‌افزار واسطه می‌شود. زمان پردازنده را مدیریت می‌کند، حافظه را تخصیص می‌دهد، با درایورها ارتباط دارد و امکانات شبکه و فایل‌سیستم را فراهم می‌کند.</p><div class="tag-row"><span>Processes</span><span>Memory</span><span>Drivers</span></div></article>
+        <article class="info-card glass"><div class="card-symbol cyan">⌘</div><h3>سیستم GNU/Linux</h3><p>هسته به‌تنهایی محیط کامل کاربری نیست. ابزارهای سیستم، کتابخانه‌ها، شِل، مدیر بسته و برنامه‌ها در کنار هسته قرار می‌گیرند. بسیاری از سیستم‌های دسکتاپ و سرور از ترکیب هسته لینوکس و ابزارهای GNU استفاده می‌کنند.</p><div class="tag-row"><span>GNU tools</span><span>Libraries</span><span>Applications</span></div></article>
+        <article class="info-card glass"><div class="card-symbol green">⟲</div><h3>ویژگی‌های کلیدی</h3><p>چندوظیفگی، پشتیبانی از چند کاربر، قابلیت انتقال میان معماری‌ها، مدل مجوزها و توسعه متن‌باز از ویژگی‌های مهم این خانواده هستند. امنیت نتیجه پیکربندی و نگه‌داری درست هم هست، نه صرفاً نام لینوکس.</p><div class="tag-row"><span>Multiuser</span><span>Portable</span><span>Open source</span></div></article>
+      </div>
+      <div class="callout glass"><span class="callout-mark">i</span><div><b>نکته کلیدی</b><p>در گفت‌وگوی روزمره، «لینوکس» معمولاً به کل سیستم اشاره می‌کند؛ اما از نظر فنی، Linux نام هسته است. توزیع، هسته را با مجموعه‌ای از ابزارها و برنامه‌ها بسته‌بندی می‌کند.</p></div></div>
+    </section>
+
+    <section class="section-wrap section" id="history">
+      <div class="section-heading"><div><span class="section-kicker">02 / TIMELINE</span><h2>از یونیکس تا امروز</h2></div><p>لینوکس حاصل یک لحظه نیست؛ روی چند دهه پژوهش، ابزار و همکاری ساخته شده است.</p></div>
+      <div class="timeline">
+        <article class="timeline-item"><div class="time-year">1969</div><div class="timeline-node"></div><div class="timeline-content glass"><h3>آغاز یونیکس</h3><p>یونیکس در آزمایشگاه Bell Labs شکل گرفت و ایده‌هایی مانند چندکاربره بودن، ابزارهای کوچک و ترکیب‌پذیر و سلسله‌مراتب فایل‌ها را گسترش داد.</p></div></article>
+        <article class="timeline-item"><div class="time-year">1983</div><div class="timeline-node"></div><div class="timeline-content glass"><h3>پروژه GNU</h3><p>ریچارد استالمن پروژه GNU را با هدف ساخت یک سیستم‌عامل آزاد آغاز کرد. در سال‌های بعد، ابزارهای برنامه‌نویسی، کتابخانه‌ها و ابزارهای سیستمی مهمی تولید شدند.</p></div></article>
+        <article class="timeline-item"><div class="time-year">1991</div><div class="timeline-node"></div><div class="timeline-content glass"><h3>انتشار هسته لینوکس</h3><p>لینوس توروالدز نخستین نسخه هسته لینوکس را منتشر کرد. مشارکت آنلاین برنامه‌نویسان به رشد سریع پروژه کمک کرد.</p></div></article>
+        <article class="timeline-item"><div class="time-year">1992</div><div class="timeline-node"></div><div class="timeline-content glass"><h3>ترکیب با نرم‌افزار آزاد</h3><p>با امکان توزیع هسته تحت مجوز GPL و ترکیب آن با ابزارهای آزاد، ساخت سیستم‌های کامل مبتنی بر لینوکس آسان‌تر شد.</p></div></article>
+        <article class="timeline-item"><div class="time-year">امروز</div><div class="timeline-node"></div><div class="timeline-content glass"><h3>زیرساخت دنیای دیجیتال</h3><p>لینوکس در سرورها، ابر، ابررایانه‌ها، روترها، سامانه‌های نهفته و هسته سیستم‌عامل اندروید نقش مهمی دارد.</p></div></article>
+      </div>
+      <div class="grid two philosophy">
+        <article class="feature-panel glass"><span class="large-icon">♧</span><h3>فلسفه متن‌باز</h3><p>کد منبع قابل مطالعه است و مجوز پروژه تعیین می‌کند کاربران چه آزادی‌هایی برای استفاده، تغییر و بازتوزیع دارند. متن‌باز بودن به معنای بی‌نیازی از مجوز یا بازبینی امنیتی نیست.</p></article>
+        <article class="feature-panel glass"><span class="large-icon">◌</span><h3>ماژولار بودن</h3><p>ابزارهای کوچک که هرکدام وظیفه مشخصی دارند، می‌توانند با ورودی و خروجی متنی به هم متصل شوند. این رویکرد ساخت اسکریپت‌ها و خودکارسازی کارها را ساده می‌کند.</p></article>
+      </div>
+    </section>
+
+    <section class="section-wrap section" id="architecture">
+      <div class="section-heading"><div><span class="section-kicker">03 / SYSTEM DESIGN</span><h2>معماری لینوکس</h2></div><p>درک لایه‌ها کمک می‌کند بفهمیم یک فرمان ساده چگونه به سخت‌افزار می‌رسد.</p></div>
+      <div class="architecture glass">
+        <div class="arch-layer user-layer"><span class="layer-index">04</span><div><b>فضای کاربر · User space</b><small>مرورگر، ویرایشگر، سرویس‌ها و برنامه‌ها</small></div><span class="layer-chip">Applications</span></div>
+        <div class="arch-arrow">↕ <small>فراخوانی سیستم (System calls)</small></div>
+        <div class="arch-layer shell-layer"><span class="layer-index">03</span><div><b>شِل و ابزارهای سیستم</b><small>Bash، core utilities، کتابخانه‌ها و سرویس‌ها</small></div><span class="layer-chip">Interface</span></div>
+        <div class="arch-arrow">↕ <small>درخواست‌های کنترل‌شده</small></div>
+        <div class="arch-layer kernel-layer"><span class="layer-index">02</span><div><b>هسته لینوکس · Kernel space</b><small>زمان‌بندی فرایند، حافظه، شبکه، فایل‌سیستم و درایورها</small></div><span class="layer-chip">Kernel</span></div>
+        <div class="arch-arrow">↕ <small>درایورها و کنترل دستگاه‌ها</small></div>
+        <div class="arch-layer hardware-layer"><span class="layer-index">01</span><div><b>سخت‌افزار</b><small>CPU، RAM، ذخیره‌ساز، کارت شبکه و دستگاه‌های جانبی</small></div><span class="layer-chip">Hardware</span></div>
+      </div>
+      <div class="grid three compact-cards">
+        <article class="mini-card glass"><h3>زمان‌بندی فرایند</h3><p>تصمیم می‌گیرد کدام نخ یا فرایند چه زمانی از پردازنده استفاده کند.</p></article>
+        <article class="mini-card glass"><h3>مدیریت حافظه</h3><p>حافظه مجازی، صفحات حافظه و جداسازی فضای آدرس فرایندها را مدیریت می‌کند.</p></article>
+        <article class="mini-card glass"><h3>فایل‌سیستم و شبکه</h3><p>دسترسی ساختاریافته به داده‌ها و ارتباط استاندارد از طریق شبکه را فراهم می‌کند.</p></article>
+      </div>
+      <div class="callout glass"><span class="callout-mark">!</span><div><b>فضای کاربر در برابر فضای هسته</b><p>برنامه‌های عادی مستقیماً به حافظه هسته یا سخت‌افزار دسترسی آزاد ندارند. از رابط‌های تعریف‌شده مانند system call استفاده می‌کنند؛ این جداسازی پایداری و کنترل دسترسی را افزایش می‌دهد.</p></div></div>
+    </section>
+
+    <section class="section-wrap section" id="components">
+      <div class="section-heading"><div><span class="section-kicker">04 / BUILDING BLOCKS</span><h2>اجزای اصلی سیستم</h2></div><p>یک سیستم لینوکسی مجموعه‌ای از اجزای همکار است، نه فقط یک ترمینال.</p></div>
+      <div class="grid three">
+        <article class="info-card glass"><div class="card-symbol cyan">⌁</div><h3>Shell</h3><p>مفسر فرمانی مانند Bash فرمان‌ها را می‌خواند، برنامه‌ها را اجرا می‌کند، ورودی و خروجی را هدایت می‌کند و امکان ساخت اسکریپت را می‌دهد.</p><code class="inline-code">echo $SHELL</code></article>
+        <article class="info-card glass"><div class="card-symbol purple">▤</div><h3>File system</h3><p>درخت فایل‌ها از ریشه <code>/</code> آغاز می‌شود. مسیرها پوشه‌ها و فایل‌ها را مشخص می‌کنند؛ در لینوکس بسیاری از منابع نیز از طریق فایل‌های ویژه نمایان می‌شوند.</p><code class="inline-code">pwd · ls · cd</code></article>
+        <article class="info-card glass"><div class="card-symbol green">⛭</div><h3>مدیر بسته</h3><p>نرم‌افزارها و وابستگی‌ها را نصب، به‌روزرسانی و حذف می‌کند. ابزار آن به توزیع بستگی دارد؛ مثلاً APT در Debian/Ubuntu و DNF در Fedora.</p><code class="inline-code">apt · dnf · pacman</code></article>
+        <article class="info-card glass"><div class="card-symbol orange">♙</div><h3>کاربران و مجوزها</h3><p>مالکیت و مجوزهای خواندن، نوشتن و اجرا مشخص می‌کنند چه کسی به چه چیزی دسترسی دارد. اصل حداقل دسترسی از عادت‌های مهم مدیریتی است.</p><code class="inline-code">whoami · id · chmod</code></article>
+        <article class="info-card glass"><div class="card-symbol pink">◴</div><h3>فرایندها و سرویس‌ها</h3><p>برنامه در حال اجرا یک فرایند است. سرویس‌ها معمولاً در پس‌زمینه کار می‌کنند و در بسیاری از توزیع‌ها با systemd مدیریت می‌شوند.</p><code class="inline-code">ps · top · systemctl</code></article>
+        <article class="info-card glass"><div class="card-symbol blue">⇄</div><h3>ورودی/خروجی و پایپ</h3><p>خروجی یک فرمان می‌تواند به فرمان بعدی منتقل شود. این قابلیت، ابزارهای کوچک را به جریان کاری قدرتمند تبدیل می‌کند.</p><code class="inline-code">cat file.txt | grep word</code></article>
+      </div>
+    </section>
+
+    <section class="section-wrap section" id="distros">
+      <div class="section-heading"><div><span class="section-kicker">05 / DISTRIBUTIONS</span><h2>توزیع‌های لینوکس</h2></div><p>توزیع‌ها هسته و ابزارها را با سیاست انتشار، محیط و مخازن نرم‌افزاری متفاوت ارائه می‌کنند.</p></div>
+      <div class="distro-grid">
+        <article class="distro-card glass"><div class="distro-logo ubuntu">●</div><div><h3>Ubuntu</h3><p>گزینه‌ای عمومی برای دسکتاپ، آموزش و سرور؛ مبتنی بر Debian و دارای چرخه انتشار مشخص.</p><span class="tag">شروع آسان</span></div></article>
+        <article class="distro-card glass"><div class="distro-logo fedora">◈</div><div><h3>Fedora</h3><p>تمرکز بر فناوری‌های نسبتاً جدید و تجربه مناسب برای توسعه‌دهندگان؛ از DNF و RPM استفاده می‌کند.</p><span class="tag">توسعه</span></div></article>
+        <article class="distro-card glass"><div class="distro-logo debian">◉</div><div><h3>Debian</h3><p>شناخته‌شده برای تعهد به نرم‌افزار آزاد، مخازن گسترده و انتخاب‌های متنوع در سرور و دسکتاپ.</p><span class="tag">پایداری</span></div></article>
+        <article class="distro-card glass"><div class="distro-logo arch">▲</div><div><h3>Arch Linux</h3><p>توزیعی مینیمال و قابل سفارشی‌سازی که معمولاً به مدیریت دستی و یادگیری بیشتر نیاز دارد.</p><span class="tag">سفارشی‌سازی</span></div></article>
+        <article class="distro-card glass"><div class="distro-logo kali">◒</div><div><h3>Kali Linux</h3><p>مجموعه‌ای برای ارزیابی امنیت و آزمون نفوذ مجاز؛ برای استفاده روزمره عمومی الزاماً بهترین انتخاب نیست.</p><span class="tag">امنیت</span></div></article>
+        <article class="distro-card glass"><div class="distro-logo mint">✳</div><div><h3>Linux Mint</h3><p>محیط دسکتاپ آشنا و رویکرد کاربرپسند؛ برای مهاجرت از سیستم‌عامل‌های دیگر مناسب است.</p><span class="tag">دسکتاپ</span></div></article>
+        <article class="distro-card glass"><div class="distro-logo redhat">▰</div><div><h3>Red Hat Enterprise Linux</h3><p>پلتفرم سازمانی با پشتیبانی تجاری، ابزارهای مدیریتی و تمرکز بر چرخه عمر سازمانی.</p><span class="tag">سازمانی</span></div></article>
+        <article class="distro-card glass"><div class="distro-logo suse">◇</div><div><h3>openSUSE</h3><p>گزینه‌ای برای ایستگاه کاری و سرور با ابزارهای مدیریتی و گونه‌های انتشار متفاوت.</p><span class="tag">مدیریت سیستم</span></div></article>
+      </div>
+      <div class="callout glass"><span class="callout-mark">?</span><div><b>کدام توزیع را انتخاب کنم؟</b><p>برای شروع، توزیعی با مستندات خوب و جامعه کاربری فعال انتخاب کن. برای سرور، چرخه پشتیبانی و سازگاری نرم‌افزارها مهم است؛ برای یادگیری امنیت، از آزمایشگاه مجاز و ماشین مجازی استفاده کن.</p></div></div>
+    </section>
+
+    <section class="section-wrap section" id="everywhere">
+      <div class="section-heading"><div><span class="section-kicker">06 / REAL WORLD</span><h2>لینوکس همه‌جا هست</h2></div><p>مدل توسعه باز و قابلیت اجرا روی سخت‌افزارهای متنوع، آن را برای کاربردهای گوناگون مناسب کرده است.</p></div>
+      <div class="grid three">
+        <article class="world-card glass"><div class="world-icon">☁</div><h3>ابر و وب‌سرورها</h3><p>بخش بزرگی از زیرساخت‌های ابری و سرورها از سیستم‌های مبتنی بر لینوکس استفاده می‌کنند؛ خودکارسازی و ابزارهای شبکه در این محیط‌ها اهمیت زیادی دارند.</p></article>
+        <article class="world-card glass"><div class="world-icon">▦</div><h3>موبایل و دستگاه‌های هوشمند</h3><p>اندروید از هسته لینوکس استفاده می‌کند. روترها، تلویزیون‌های هوشمند و سامانه‌های نهفته نیز ممکن است سیستم مبتنی بر لینوکس داشته باشند.</p></article>
+        <article class="world-card glass"><div class="world-icon">✧</div><h3>پژوهش و محاسبات</h3><p>لینوکس در محاسبات علمی، خوشه‌ها و ابررایانه‌ها رایج است؛ مدیریت منابع، ابزارهای خط فرمان و قابلیت خودکارسازی در این محیط‌ها سودمندند.</p></article>
+      </div>
+    </section>
+
+    <section class="section-wrap section terminal-section" id="terminal">
+      <div class="section-heading"><div><span class="section-kicker">07 / HANDS-ON LAB</span><h2>آزمایشگاه ترمینال</h2></div><p>فرمان‌ها را در یک محیط شبیه‌سازی‌شده امتحان کن. این ترمینال به سیستم واقعی دسترسی ندارد.</p></div>
+      <div class="terminal-window glass">
+        <div class="terminal-titlebar"><div class="window-dots"><i></i><i></i><i></i></div><span>student@linux-lab: ~</span><button id="clearTerminal">پاک‌کردن</button></div>
+        <div class="terminal-output" id="terminalOutput" aria-live="polite"><p class="term-muted">Linux Atlas practice shell · محیط آموزشی امن</p><p>برای دیدن فرمان‌های پشتیبانی‌شده، <b>help</b> را وارد کن.</p></div>
+        <form id="terminalForm" class="terminal-input-row"><label for="terminalInput">student@linux-lab <span>❯</span></label><input id="terminalInput" autocomplete="off" spellcheck="false" placeholder="یک فرمان بنویس..." aria-label="فرمان ترمینال"><button type="submit">اجرا ↵</button></form>
+      </div>
+      <div class="command-chips"><button data-cmd="help">help</button><button data-cmd="pwd">pwd</button><button data-cmd="ls -la">ls -la</button><button data-cmd="mkdir practice">mkdir practice</button><button data-cmd="touch notes.txt">touch notes.txt</button><button data-cmd='echo "Hello Linux" > notes.txt'>echo "Hello Linux" &gt; notes.txt</button><button data-cmd="cat notes.txt">cat notes.txt</button><button data-cmd="tree">tree</button></div>
+      <p class="terminal-note">این محیط یک شبیه‌ساز آموزشی است: تغییرات در حافظه مرورگر نگه‌داری می‌شوند و فرمان‌های سیستم واقعی اجرا نمی‌شوند.</p>
+    </section>
+
+<section class="creator-section" id="creator">
+    <div class="creator-card">
+
+        <div class="creator-icon"></div>
+
+        <h3 class="creator-label">THE CREATOR</h3>
+
+        <h2>Sayed Adib "Hashemi"</h2>
+
+        <p class="creator-description">
+            Computer Science Student | Linux & Cybersecurity Enthusiast
+        </p>
+
+        <p class="creator-text">
+            This interactive platform is designed to help learners
+            understand Linux and Kali Linux through practical lessons
+            and hands-on learning.
+        </p>
+
+        <div class="creator-links">
+
+            <a href="https://github.com/Adib-Hashemi"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="creator-btn github-btn">
+                GitHub
+            </a>
+
+            <a href="mailto:adibhashemi99@gmail.com"
+               class="creator-btn email-btn">
+                Contact via Gmail
+            </a>
+
+        </div>
+
+        <p class="creator-footer">
+            Designed & Developed by Sayed Adib "Hashemi"
+        </p>
+
+    </div>
+</section>
+
+    <section class="section-wrap section" id="quiz">
+      <div class="section-heading"><div><span class="section-kicker">08 / CHECK YOURSELF</span><h2>آزمون دانش لینوکس</h2></div><p>به پرسش‌ها پاسخ بده و بازخورد هر گزینه را بلافاصله ببین.</p></div>
+      <div class="quiz-shell glass">
+        <div class="quiz-progress-row"><span id="quizCounter">پرسش ۱ از ۱۰</span><div class="progress-track"><div id="quizProgress"></div></div><span id="quizScore">امتیاز: ۰</span></div>
+        <div id="quizContent"></div>
+        <div class="quiz-controls"><button class="btn btn-ghost" id="prevQuestion">قبلی</button><button class="btn btn-primary" id="nextQuestion">پرسش بعدی ←</button><button class="btn btn-ghost hidden" id="restartQuiz">شروع دوباره</button></div>
+      </div>
+    </section>
+
+    <section class="section-wrap final-cta glass"><div class="cta-orb"></div><span class="section-kicker">YOUR NEXT STEP</span><h2>یادگیری با تمرین ماندگار می‌شود.</h2><p>یک توزیع را در ماشین مجازی نصب کن، فرمان‌ها را تمرین کن و برای هر تغییر مهم، دلیل و نتیجه‌اش را یادداشت کن.</p><a class="btn btn-primary" href="#terminal">بازگشت به آزمایشگاه <span>↑</span></a></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">λ</span><span>LINUX <b>ATLAS</b></span></a><span>یک مسیر تعاملی برای آشنایی با لینوکس</span><a href="#home">بازگشت به بالا ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
